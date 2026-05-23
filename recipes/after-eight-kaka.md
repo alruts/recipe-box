@@ -2,7 +2,6 @@
 title: After Eight Kaka
 tags:
   - Stína
-  - Kaka
   - Desert
 description: Kókoskaka með after eight, rjóma og banana.
 layout: recipe.njk

@@ -2,7 +2,6 @@
 title: Daim kaka 2
 tags:
   - Anna Soffía
-  - Kaka
   - Desert
 description: Frosin marengskaka með daim-súkkulaði og rjóma.
 layout: recipe.njk

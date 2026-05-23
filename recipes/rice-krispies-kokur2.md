@@ -1,7 +1,6 @@
 ---
 title: Rice Krispies Kaka 2
 tags:
-  - Kaka
   - Desert
   - Barna
 description: Fljótlegar og stökkar súkkulaði rice krispies kökur.

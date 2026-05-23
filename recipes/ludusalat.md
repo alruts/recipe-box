@@ -3,7 +3,6 @@ title: Lúðusalat '93
 tags:
   - Fiskur
   - Sítróna
-  - Salat
 description: Lúðusalat með sítrónu, tómötum og ólífum, gott í veislur.
 layout: recipe.njk
 ---

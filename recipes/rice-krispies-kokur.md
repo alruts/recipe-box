@@ -2,7 +2,6 @@
 title: Rice Krispies Kaka
 tags:
   - Þórhildur
-  - Kaka
   - Desert
 description: Rice krispies kökur með súkkulaði og karamellu.
 layout: recipe.njk

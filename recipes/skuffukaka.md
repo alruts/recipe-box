@@ -2,7 +2,6 @@
 title: Skúffukaka
 tags:
   - Amma Perla
-  - Kaka
   - Desert
 description: Hin klassíska skúffukaka með kakó, kanil og negul.
 layout: recipe.njk
