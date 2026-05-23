@@ -80,7 +80,6 @@ input:focus {
 }
 
 .recipe:hover {
-  transform: translateY(-3px);
   border-color: #bbb;
 }
 
