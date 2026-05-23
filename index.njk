@@ -71,54 +71,79 @@
 
   <script>
     const search = document.getElementById('search');
+    const recipeList = document.getElementById('recipeList');
     const recipes = [...document.querySelectorAll('.recipe')];
     const emptyState = document.getElementById('emptyState');
 
+    const recipeData = recipes.map(recipe => ({
+      recipe,
+      title: (recipe.querySelector('h2')?.textContent || '').toLowerCase(),
+      tags: [...recipe.querySelectorAll('.tag')].map(t => t.textContent.toLowerCase()),
+      text: (() => {
+        const title = recipe.querySelector('h2')?.textContent || '';
+        const description = recipe.querySelector('p')?.textContent || '';
+        const tags = [...recipe.querySelectorAll('.tag')].map(t => t.textContent).join(' ');
+        const extra = recipe.dataset.search || '';
+        return `${title} ${description} ${tags} ${extra}`.toLowerCase();
+      })()
+    }));
+
+    const originalOrder = recipes.slice();
+
     function fuzzyMatch(text, query) {
-      text = text.toLowerCase();
-      query = query.toLowerCase();
-
       let i = 0;
-
       for (const char of text) {
         if (char === query[i]) i++;
-
-        if (i === query.length) {
-          return true;
-        }
+        if (i === query.length) return true;
       }
-
       return false;
+    }
+
+    function scoreRecipe(d, query) {
+      const q = query.toLowerCase();
+      const words = q.split(/\s+/).filter(Boolean);
+      let score = 0;
+
+      if (d.tags.some(t => t === q)) score += 1000;
+      else if (d.tags.some(t => t.includes(q))) score += 300;
+
+      const tagWords = d.tags.join(' ').split(/\s+/);
+      if (words.every(w => tagWords.some(tw => tw === w))) score += 900;
+
+      if (d.title === q) score += 500;
+      else if (d.title.includes(q)) score += 200;
+
+      if (d.text.includes(q)) score += 100;
+
+      if (words.every(w => d.text.includes(w))) score += 50;
+
+      return score;
     }
 
     search.addEventListener('input', () => {
       const query = search.value.trim();
+      const parent = recipeList;
+
+      if (!query) {
+        originalOrder.forEach(r => parent.appendChild(r));
+        recipes.forEach(r => r.classList.remove('hidden'));
+        emptyState.style.display = 'none';
+        return;
+      }
+
+      const scored = recipeData
+        .map(d => ({
+          recipe: d.recipe,
+          score: scoreRecipe(d, query),
+          match: fuzzyMatch(d.text, query.toLowerCase())
+        }))
+        .sort((a, b) => b.score - a.score);
+
       let visible = 0;
 
-      recipes.forEach(recipe => {
-        const title =
-          recipe.querySelector('h2')?.textContent || '';
-
-        const description =
-          recipe.querySelector('p')?.textContent || '';
-
-        const tags = [
-          ...recipe.querySelectorAll('.tag')
-        ]
-          .map(tag => tag.textContent)
-          .join(' ');
-
-        const extra =
-          recipe.dataset.search || '';
-
-        const searchableText = `
-          ${title}
-          ${description}
-          ${tags}
-          ${extra}
-        `.toLowerCase();
-
-        if (!query || fuzzyMatch(searchableText, query)) {
+      scored.forEach(({ recipe, match }) => {
+        parent.appendChild(recipe);
+        if (match) {
           recipe.classList.remove('hidden');
           visible++;
         } else {
@@ -126,8 +151,7 @@
         }
       });
 
-      emptyState.style.display =
-        visible ? 'none' : 'block';
+      emptyState.style.display = visible ? 'none' : 'block';
     });
   </script>
 
