@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Recipe Index</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Recipe Index</h1>
+
+    <p class="subtitle">
+      Search recipes instantly with a fuzzy finder.
+    </p>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search recipes, ingredients, or tags..."
+      />
+    </div>
+
+    <div class="recipes" id="recipeList">
+
+      {% for recipe in collections.all %}
+
+        {% if recipe.data.title %}
+
+          <a
+            class="recipe"
+            href="{{ recipe.url }}"
+            data-search="
+              {{ recipe.data.title }}
+              {{ recipe.data.description }}
+              {{ recipe.data.tags | join(' ') }}
+            "
+          >
+
+            <h2>{{ recipe.data.title }}</h2>
+
+            <div class="tags">
+              {% for tag in recipe.data.tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+
+            <p>
+              {{ recipe.data.description }}
+            </p>
+
+          </a>
+
+        {% endif %}
+
+      {% endfor %}
+
+    </div>
+
+    <p class="empty" id="emptyState">
+      No recipes matched your search.
+    </p>
+
+  </div>
+
+  <script>
+    const search = document.getElementById('search');
+    const recipes = [...document.querySelectorAll('.recipe')];
+    const emptyState = document.getElementById('emptyState');
+
+    function fuzzyMatch(text, query) {
+      text = text.toLowerCase();
+      query = query.toLowerCase();
+
+      let i = 0;
+
+      for (const char of text) {
+        if (char === query[i]) i++;
+
+        if (i === query.length) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    search.addEventListener('input', () => {
+      const query = search.value.trim();
+      let visible = 0;
+
+      recipes.forEach(recipe => {
+        const title =
+          recipe.querySelector('h2')?.textContent || '';
+
+        const description =
+          recipe.querySelector('p')?.textContent || '';
+
+        const tags = [
+          ...recipe.querySelectorAll('.tag')
+        ]
+          .map(tag => tag.textContent)
+          .join(' ');
+
+        const extra =
+          recipe.dataset.search || '';
+
+        const searchableText = `
+          ${title}
+          ${description}
+          ${tags}
+          ${extra}
+        `.toLowerCase();
+
+        if (!query || fuzzyMatch(searchableText, query)) {
+          recipe.classList.remove('hidden');
+          visible++;
+        } else {
+          recipe.classList.add('hidden');
+        }
+      });
+
+      emptyState.style.display =
+        visible ? 'none' : 'block';
+    });
+  </script>
+
+</body>
+</html>

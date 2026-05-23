@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <main class="recipe-page">
+    <a href="/">← Back</a>
+
+    <h1>{{ title }}</h1>
+
+    <div class="tags">
+      {% for tag in tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+
+    <p>{{ description }}</p>
+
+    <article>
+{{ content | safe }}
+</article>
+  </main>
+</body>
+</html>
