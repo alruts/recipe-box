@@ -6,7 +6,7 @@
 
   <title>Recipe Index</title>
 
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
           <a
             class="recipe"
-            href="{{ recipe.url }}"
+            href="{{ recipe.url | url }}"
             data-search="
               {{ recipe.data.title }}
               {{ recipe.data.description }}

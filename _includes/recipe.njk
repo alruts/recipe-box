@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
 
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
 
 <body>
   <main class="recipe-page">
-    <a href="/">← Back</a>
+    <a href="{{ '/' | url }}">← Back</a>
 
     <h1>{{ title }}</h1>
 
