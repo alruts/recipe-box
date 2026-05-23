@@ -4,7 +4,7 @@ tags:
   - Fiskur
   - Sítróna
   - Salat
-description: Lúðusalat gott í veislur.
+description: Lúðusalat með sítrónu, tómötum og ólífum, gott í veislur.
 layout: recipe.njk
 ---
 

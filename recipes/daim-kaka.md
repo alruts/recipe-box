@@ -4,7 +4,7 @@ tags:
   - Anna Soffía
   - Kaka
   - Desert
-description: Ljúffeng daim kaka, frosin.
+description: Frosin daim kaka með marengsbotni og tvöföldu daim-súkkulaði.
 layout: recipe.njk
 ---
 

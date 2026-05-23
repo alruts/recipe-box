@@ -4,7 +4,7 @@ tags:
   - Kaka
   - Desert
   - Barna
-description: Súkkulaði rice krispies kökur
+description: Fljótlegar og stökkar súkkulaði rice krispies kökur.
 layout: recipe.njk
 ---
 

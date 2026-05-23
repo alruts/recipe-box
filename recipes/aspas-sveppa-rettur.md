@@ -4,7 +4,7 @@ tags:
   - Magga
   - Ofnréttur
   - Veisla
-description: Aspas og svepparéttur með nóg af osti.
+description: Aspas og sveppir í rjóma með osti, bakað í ofni.
 layout: recipe.njk
 ---
 

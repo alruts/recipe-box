@@ -4,7 +4,7 @@ tags:
   - Stína
   - Kaka
   - Desert
-description: ...
+description: Kókoskaka með after eight, rjóma og banana.
 layout: recipe.njk
 ---
 

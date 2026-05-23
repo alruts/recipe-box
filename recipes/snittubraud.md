@@ -4,7 +4,7 @@ tags:
   - Þórhildur
   - Forréttur
   - Fljótlegt
-description: Fljótleg uppskrift að brauði.
+description: Fljótlegt snittubrauð með þurrgeri.
 layout: recipe.njk
 ---
 

@@ -4,7 +4,7 @@ tags:
   - Gestgjafinn
   - Kaka
   - Desert
-description: Ávaxtakaka
+description: Létt ávaxtakaka með marengsbotni, rjóma og after eight.
 layout: recipe.njk
 ---
 

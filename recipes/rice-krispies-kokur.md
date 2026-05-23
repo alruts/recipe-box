@@ -4,7 +4,7 @@ tags:
   - Þórhildur
   - Kaka
   - Desert
-description: Súkkulaði rice krispies kökur með karamellu.
+description: Rice krispies kökur með súkkulaði og karamellu.
 layout: recipe.njk
 ---
 
