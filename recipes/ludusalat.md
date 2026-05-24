@@ -22,12 +22,13 @@ layout: recipe.njk
 - 4 msk matarólía og 2 msk hvítvínsedik
 - 4-5 dropar tabasco
 - 1/2 tsk oregano
+- 2 msk steinselju fersk, smátt söxuð
 
 # Instructions
 
-1. Skera lúðu í 2x2 bita
+1. Skera lúðu í 2x2 bitasett saman við kryddlögin í minnst 3 klst
 1. Blanda vel saman með sítrónu salt og sykur
 1. Láta liggja í sólarhring í box og hristi
-4. Bæta útá hráefnum [2](#2)
+4. Bæta útá hráefnum [2](#2) sett saman við kryddlögin í minnst 3 klst
 
 
