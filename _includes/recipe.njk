@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="is">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title }}</title>
-
-  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 </head>
-
 <body>
   <main class="recipe-page">
-    <a href="{{ '/' | url }}">← Back</a>
+    <a class="back-link" href="{{ '/' | url }}">&larr; Til baka</a>
 
-    <h1>{{ title }}</h1>
+    <div class="recipe-single">
+      <h1>{{ title }}</h1>
 
-    <div class="tags">
-      {% for tag in tags %}
-        <span class="tag">{{ tag }}</span>
-      {% endfor %}
-    </div>
+      <div class="tags">
+        {% for tag in tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
 
-    <p>{{ description }}</p>
+      <p class="description">{{ description }}</p>
 
-    <article>
+      <article class="content">
 {{ content | safe }}
 </article>
+    </div>
   </main>
 </body>
 </html>
