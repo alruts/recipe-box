@@ -3,7 +3,7 @@ title: Rice Krispies Kaka 2
 tags:
   - Desert
   - Barna
-description: Bar með súkkulaði (classic).
+description: Bara með súkkulaði (classic).
 layout: recipe.njk
 ---
 
