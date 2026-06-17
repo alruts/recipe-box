@@ -3,7 +3,7 @@ title: Rice Krispies Kaka 2
 tags:
   - Desert
   - Barna
-description: Fljótlegar og stökkar súkkulaði rice krispies kökur.
+description: Bar með súkkulaði (classic).
 layout: recipe.njk
 ---
 

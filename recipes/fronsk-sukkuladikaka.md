@@ -3,7 +3,7 @@ title: Frönsk súkkulaðikaka
 tags:
   - Þórhildur
   - Desert
-description: ...
+description: Einföld og góð súkkulaðikaka.
 layout: recipe.njk
 ---
 

@@ -3,7 +3,7 @@ title: Cheerios kaka
 tags:
   - Kaka
   - Afmæli
-description: ...
+description: Í barnaafmæli
 layout: recipe.njk
 ---
 

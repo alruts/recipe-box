@@ -2,9 +2,9 @@
 title: Bakaður Brie
 tags:
   - Port 9
-  - Forréttur
-  - Fljótlegt
-description: Hinn sívinsæli Bakaði Brie réttur af port 9.
+  - Gunni Palli
+  - Tapas
+description: Sívinsæll tapas réttur - ready á 10 min.
 layout: recipe.njk
 ---
 
