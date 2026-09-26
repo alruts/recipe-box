@@ -13,7 +13,7 @@ layout: recipe.njk
 - 1 rauð paprika 
 - 1 lime
 - smá orange juice
-- 1 laukur (rauðlaukur)
+- 1 laukur (hvítur laukur bestur, svo rauðlaukur, svo þessi venjulegi guli)
 - 1 hvítlauksgeiri
 - salt og chili eftir smekk
 - 1 búnt kóríander
