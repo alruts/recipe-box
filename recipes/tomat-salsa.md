@@ -16,6 +16,7 @@ layout: recipe.njk
 - 1 laukur (rauðlaukur)
 - 1 hvítlauksgeiri
 - salt og chili eftir smekk
+- 1 búnt kóríander
 - ólífuolía
 
 # Instructions
@@ -26,5 +27,5 @@ við háan hita eða grilla. Mauka saman í matvinnsluvél eða með mortel. Oft
 að grilla bara hálfan laukinn og saxa rest fínt og hafa hrátt útí.
 
 Blanda rest útí, lime safa, orange safa, salt og ólífuolía þangað til salsað er
-girnilegt.
+girnilegt, saxa kóríander fínt og bæta við.
 
